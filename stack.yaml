@@ -1,0 +1,26 @@
+flags:
+  liquid-fixpoint:
+    devel: true
+  liquidhaskell:
+    devel: true
+
+packages:
+- .
+- location:
+    git: git@github.com:ucsd-progsys/liquidhaskell.git
+    commit: 3863d3b472f8200ff1ee69141089954acb85aac0
+  extra-dep: true
+  subdirs:
+    - ./liquid-fixpoint
+    - ./liquiddesugar
+    - '.'
+
+extra-deps:
+- dotgen-0.4.2
+- fgl-visualize-0.1.0.1
+- intern-0.9.1.4
+- located-base-0.1.1.0
+
+# compiler-check: newer-minor
+resolver: lts-6.30
+pvp-bounds: both
